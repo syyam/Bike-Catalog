@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bike Catalog</string>
+    <string name="retry">Retry</string>
+    <string name="submit">Submit</string>
+    <string name="clear">Clear Filter</string>
+    <string name="results_error">Results could not be loaded</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort Items By Price</string>
+    <string name="size">Select Size</string>
+    <string name="filter">Filter Items</string>
+    <string name="no_results_found">No results found for this query</string>
+    <string name="radio_sort_asc">Lowest To Highest</string>
+    <string name="radio_sort_dec">Highest To Lowest</string>
+
+</resources>
