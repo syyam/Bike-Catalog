@@ -25,4 +25,7 @@ data class Bikes(
     @SerializedName("picture")
     val picture: String,
 
+    @SerializedName("description")
+    val description: String,
+
 ) : Parcelable

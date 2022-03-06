@@ -41,9 +41,9 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
 
         binding.apply {
             name.text = args.bikes.bikeName
-            price.text = args.bikes.price.toString()
-            category.text = args.bikes.category
-
+            price.text = "Price: " + "€" + args.bikes.price.toString()
+            category.text = "Category: " + args.bikes.category
+            description.text = args.bikes.description
             avatar.apply {
                 transitionName = args.bikes.picture
                 Glide.with(view)

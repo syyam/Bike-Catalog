@@ -100,13 +100,14 @@ class MainViewHolder(val binding: ItemBikesBinding) : RecyclerView.ViewHolder(bi
         binding.apply {
 
             Glide.with(itemView)
-                .load("bike.picture")
+                .load(bike.picture)
                 .centerCrop()
                 .error(android.R.drawable.stat_notify_error)
                 .into(avatar)
 
             price.text = "€" + bike.price.toString()
             name.text = bike.bikeName
+            frameSize.text = bike.frameSize
             category.text = bike.category
             ViewCompat.setTransitionName(this.avatar, "avatar_${bike.id}")
 

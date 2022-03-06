@@ -16,12 +16,12 @@
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            tools:ignore="ContentDescription"
-            tools:src="@android:drawable/picture_frame" />
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
 
     </FrameLayout>
 
@@ -32,13 +32,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:ellipsize="end"
-        android:textSize="14sp"
         android:maxLines="1"
         android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatarFrame"
-        tools:text="kotlin-trending-repos-and-more" />
+        tools:text="Cycle name" />
 
     <TextView
         android:id="@+id/price"
@@ -46,13 +47,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:ellipsize="end"
-        android:textSize="16sp"
         android:maxLines="1"
         android:textAlignment="center"
+        android:textColor="@color/colorPrice"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        tools:text="yalematta" />
+        tools:text="$123" />
 
     <TextView
         android:id="@+id/category"
@@ -60,15 +63,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:maxLines="5"
-        android:textSize="12sp"
-
         android:textAlignment="center"
+
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/price"
         tools:text="" />
 
-
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintEnd_toEndOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        tools:text="" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

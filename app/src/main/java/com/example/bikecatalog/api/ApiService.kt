@@ -12,6 +12,6 @@ interface ApiService {
     companion object {
         const val BASE_URL = "https://api.jsonbin.io/"
     }
-    @GET("b/621f6120a703bb6749204708/1")
+    @GET("b/621f6120a703bb6749204708/4")
     suspend fun getBikes(): Response<BikesResponse>
 }
