@@ -59,7 +59,7 @@ class BikesFragment :
 
     private fun initialize() {
         initConst()
-
+        binding.progress.visibility = View.VISIBLE
         filteredItems = arrayListOf<Bikes>()
         binding.recycler.adapter = bikesAdapter
     }
@@ -80,6 +80,7 @@ class BikesFragment :
         })
         viewModel.error.observe(viewLifecycleOwner, Observer {
             if (it != null) {
+                binding.progress.visibility = View.GONE
                 binding.error.visibility = View.VISIBLE
                 binding.btnRetry.visibility = View.VISIBLE
                 binding.error.text = it
@@ -125,6 +126,9 @@ class BikesFragment :
 
             btnRetry.setOnClickListener {
                 viewModel.fetchBikes()
+                binding.progress.visibility = View.VISIBLE
+                binding.error.visibility = View.GONE
+                binding.btnRetry.visibility = View.GONE
             }
 
 

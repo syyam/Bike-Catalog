@@ -38,21 +38,22 @@ class BikesViewModel @Inject constructor(
                 val response = repository.getSearchResults()
 
                 if (response.isSuccessful) {
-
-
                     bikeList.postValue(response.body()?.items)
+                    progressBarStatus.postValue(false)
+
                 } else {
+                    progressBarStatus.postValue(false)
                     error.postValue(response.message())
                 }
             } catch (e: Exception) {
                 error.postValue(ERROR_MESSAGE)
+                progressBarStatus.postValue(false)
 
             }
 
         }
 
 
-        progressBarStatus.value = false
     }
 
     companion object {
