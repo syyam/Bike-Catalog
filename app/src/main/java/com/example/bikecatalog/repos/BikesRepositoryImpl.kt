@@ -10,7 +10,6 @@ class BikesRepositoryImpl @Inject constructor(private val apiService: ApiService
     BikesRepository {
     override suspend fun getSearchResults(): Response<BikesResponse> {
         val res = apiService.getBikes()
-        Log.d("aaaaaaaaa", res.message() + res.body())
         return res
     }
 
